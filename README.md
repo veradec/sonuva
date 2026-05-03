@@ -2,8 +2,8 @@
 
 sonuva is a c helper single header library 
 
-feat:
-[ ] LOG  
+feat:  
+[ ] Log  
 [ ] String Tokenizer   
 [ ] File I/O  
 
