@@ -5,7 +5,6 @@
 #include <string.h>
 #include <stdarg.h>
 
-
 #define NARGS(...) NARGS_(__VA_ARGS__, 5, 4, 3, 2, 1, 0)
 #define NARGS_(_5, _4, _3, _2, _1, N, ...) N
 
@@ -38,8 +37,5 @@ void LOG2(char *str, char *level) {
 
 
 
+
 #endif // SONUVA_IMPLEMENTATION
-
-
-/* I took it from stack overflow man stop asking me questions */
-
