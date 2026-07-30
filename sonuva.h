@@ -35,6 +35,60 @@ void LOG2(char *str, char *level) {
   }
 }
 
+// Vector
+
+
+typedef struct Vector {
+  size_t size;
+  size_t capacity;
+  int *arr;  
+} Vector;
+
+
+void vec_push(Vector *v, int value) {
+  if (v) {
+    if (v->size >= v->capacity) {
+      size_t new_capacity = v->capacity * 2;
+      if(new_capacity == 0) new_capacity = 8;
+      int *bigger_arr = realloc(v->arr, (sizeof(int) * new_capacity));
+      v->arr = bigger_arr;
+      v->capacity = new_capacity;
+    }
+  } else {
+    v = malloc(sizeof(Vector) * 2);
+    v->capacity = sizeof(Vector) * 2;
+    v->size = 0;
+  }
+  v->arr[v->size] = value;
+  v->size++;
+}
+
+
+void vec_swap(Vector *v, int pos1, int pos2) {
+  int temp = v->arr[pos1];
+  v->arr[pos1] = v->arr[pos2];
+  v->arr[pos2] = temp;
+}
+
+
+// Hashmap
+
+typedef struct HashMapElem {
+  char* key,
+  char* value;
+}
+
+typedef struct HashMap {
+  size_t size;
+  size_t capacity;
+  HashMapElem *arr;  
+} HashMap;
+
+void hs_put() {}
+
+void hs_get() {}
+
+void 
 
 
 

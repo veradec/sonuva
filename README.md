@@ -3,7 +3,7 @@
 sonuva is a c helper single header library 
 
 feat:  
-[ ] Log  
-[ ] String Tokenizer   
+[X] Log (Has three levels of Log levels)  
+[ ] String Tokenizer  
 [ ] File I/O  
 
